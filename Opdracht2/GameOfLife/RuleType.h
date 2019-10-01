@@ -4,6 +4,6 @@ class RuleType
 public:
 	virtual ~RuleType();
 	RuleType();
-	virtual bool returnStatus() =0;
+	virtual bool returnStatus(int amount, bool status) =0;
 };
 

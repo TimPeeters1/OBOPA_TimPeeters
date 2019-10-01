@@ -27,7 +27,7 @@
     <ClCompile Include="RuleType.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rule1.cpp">
+    <ClCompile Include="ConwayRules.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClInclude Include="RuleType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rule1.h">
+    <ClInclude Include="ConwayRules.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

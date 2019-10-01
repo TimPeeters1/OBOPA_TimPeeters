@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{E45C9A41-E81E-478B-B3C5-2D39E0F74699}</ProjectGuid>
+    <ProjectGuid>{BB9819E3-FC3F-4147-82E2-BF11C0C8CF5F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>GameOfLife</RootNamespace>
+    <RootNamespace>Opdracht3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,17 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="Bankrekening.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="GameOfLife.cpp" />
-    <ClCompile Include="Rule1.cpp" />
-    <ClCompile Include="RuleType.cpp" />
+    <ClCompile Include="Transactie.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cell.h" />
-    <ClInclude Include="GameOfLife.h" />
-    <ClInclude Include="Rule1.h" />
-    <ClInclude Include="RuleType.h" />
+    <ClInclude Include="Bankrekening.h" />
+    <ClInclude Include="Transactie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
