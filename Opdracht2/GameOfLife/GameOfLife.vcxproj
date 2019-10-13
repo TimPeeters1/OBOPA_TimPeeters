@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="CustomRules.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GameOfLife.cpp" />
     <ClCompile Include="ConwayRules.cpp" />
@@ -159,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cell.h" />
+    <ClInclude Include="CustomRules.h" />
     <ClInclude Include="GameOfLife.h" />
     <ClInclude Include="ConwayRules.h" />
     <ClInclude Include="RuleType.h" />

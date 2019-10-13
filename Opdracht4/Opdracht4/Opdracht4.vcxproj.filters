@@ -24,12 +24,42 @@
     <ClCompile Include="Role.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Elf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FarmerRole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShamanRole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoldierRole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Orc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NPC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Role.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Elf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FarmerRole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShamanRole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoldierRole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Orc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

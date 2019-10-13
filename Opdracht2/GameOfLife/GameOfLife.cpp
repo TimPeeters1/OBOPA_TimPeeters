@@ -1,11 +1,17 @@
 #include "GameOfLife.h"
 #include "ConwayRules.h"
+#include "CustomRules.h"
 
 #include <chrono>
 #include <thread>
 
 GameOfLife::GameOfLife() {
-	type = new ConwayRules();
+	//Parse new rulesets here !!!//
+
+	type = new ConwayRules(); 
+	//type = new CustomRules();
+
+	//--------------------------//
 
 	startGrid();
 	drawGrid();
@@ -14,9 +20,8 @@ GameOfLife::GameOfLife() {
 
 	for (int i = 0; i < 500; i++)
 	{
-		nextGrid();
-		drawGrid();
-		std::this_thread::sleep_for(std::chrono::milliseconds(300));
+		currentGrid();
+		std::this_thread::sleep_for(std::chrono::milliseconds(10));
 	}
 }
 
@@ -53,43 +58,63 @@ void GameOfLife::drawGrid()
 		}
 		std::cout << "\n";
 	}
-
-	currentGrid();
 }
 
 void GameOfLife::currentGrid() {
+
 	for (int i = 0; i < 25; ++i)
 	{
 		for (int j = 0; j < 25; ++j)
 		{
-			grid[i][j].checkRules(getNeighbours(i, j), type);
+			lastGrid[i][j].setNeighbours(getNeighbours(i, j));
+		}
+	}
+
+	for (int i = 0; i < 25; ++i)
+	{
+		for (int j = 0; j < 25; ++j)
+		{
 			lastGrid[i][j] = grid[i][j];
 		}
 	}
+
+
+
+	nextGrid();
 }
 
-void GameOfLife::nextGrid()
-{
+void GameOfLife::nextGrid() {
 	clearGrid();
+
 	for (int i = 0; i < 25; ++i)
 	{
-		for (int j = 0; j < 15; ++j)
+		for (int j = 0; j < 25; ++j)
 		{
-			lastGrid[i][j].checkRules(getNeighbours(i, j), type);
-			grid[i][j] = lastGrid[i][j];
+			grid[i][j].setNeighbours(getNeighbours(i, j));
 		}
 	}
+
+	for (int i = 0; i < 25; ++i)
+	{
+		for (int j = 0; j < 25; ++j)
+		{
+			grid[i][j].checkRules(type); 
+		}
+	}
+
+	drawGrid();
 }
 
-void GameOfLife::startGrid() //Verander de i en j waarden voor aparte patronen.
+
+void GameOfLife::startGrid() //Verander coordinaten van grid patroon om leuke vormpjes te maken :)
 {
-	for (int j = 6; j < 20; j++)
-	{	
-		for (int i = 6; i < 15; i++)
-		{
-			grid[j][i].setStatus(true);
-		}
+
+	//Huidige vorm is row van 10 die leuke 'explosies' maakt (Reference grid: https://bitstorm.org/gameoflife/)
+	for (int i = 10; i < 20; i++)
+	{
+		grid[10][i].setStatus(true);
 	}
+
 }
 
 void GameOfLife::clearGrid()

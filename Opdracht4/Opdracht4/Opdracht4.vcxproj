@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -151,13 +151,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Elf.cpp" />
+    <ClCompile Include="FarmerRole.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Orc.cpp" />
     <ClCompile Include="Role.cpp" />
+    <ClCompile Include="ShamanRole.cpp" />
+    <ClCompile Include="SoldierRole.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Elf.h" />
+    <ClInclude Include="FarmerRole.h" />
     <ClInclude Include="NPC.h" />
+    <ClInclude Include="Orc.h" />
     <ClInclude Include="Role.h" />
+    <ClInclude Include="ShamanRole.h" />
+    <ClInclude Include="SoldierRole.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

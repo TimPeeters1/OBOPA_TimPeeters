@@ -1,9 +1,10 @@
 #pragma once
-#include <string>
+#include <iostream>
+#include <vector>
 
-#include "Role.h"
+typedef enum RoleType{farmer, shaman, soldier};
 
-typedef enum species{ elf, orc };
+typedef enum Species{elf, orc};
 
 class NPC
 {
@@ -11,7 +12,7 @@ class NPC
 		NPC();
 		virtual ~NPC();
 
-		static Role* setRole(); 
+		static NPC* createNPC(RoleType role, Species specie, std::string name);
 
 		virtual void render() = 0;
 	private:

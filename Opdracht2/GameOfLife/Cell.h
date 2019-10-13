@@ -8,11 +8,14 @@ class Cell {
 		Cell();
 
 		void drawCell();
-		void checkRules(int neighbourAmount, RuleType* rules);
+		void setNeighbours(int amount);
+		void checkRules(RuleType* rules);
 
 		bool getStatus();
 		bool setStatus(bool status);
 	private:
 		bool isAlive;
+
+		int neighbourCount;
 		
 };

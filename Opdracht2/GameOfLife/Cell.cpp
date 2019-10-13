@@ -10,9 +10,14 @@ void Cell::drawCell()
 	isAlive ?  std::cout << "*" : std::cout << "-";
 }
 
-void Cell::checkRules(int neighbourAmount, RuleType* type)
+void Cell::setNeighbours(int amount) {
+	neighbourCount = amount;
+}
+
+
+void Cell::checkRules(RuleType* type)
 {
-	isAlive = type->returnStatus(neighbourAmount, isAlive);
+	isAlive = type->returnStatus(neighbourCount, isAlive);
 }
 
 bool Cell::getStatus(){ return isAlive;}
